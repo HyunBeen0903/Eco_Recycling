@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'main/navigator.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: LoginScreen(),
       routes: {
-        "/main": (context) => const MainPage(),
+        "/main": (context) => const NavigatorPage(),
       },
     );
   }
@@ -55,7 +55,7 @@ class LoginScreen extends StatelessWidget {
             Container(
               width: double.infinity, // 사이즈는 고정값을 넣는것은 좋지않다(기기마다 사이즈가 다르므로)
               margin: const EdgeInsets.only(top: 16), // 위쪽에만 간격을 준다.
-              child: ElevatedButton(
+              child: ElevatedButton( //로그인 버튼 클릭시 main화면으로 이동
                 onPressed: () {
                   Navigator.of(context).pushReplacementNamed("/main");
                 },
