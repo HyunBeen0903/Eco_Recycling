@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:headream/main.dart';
 
 void main() {
   runApp(MyApp());
@@ -51,6 +52,9 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      routes:{
+        "/main": (context) => const MainPage()
+      },
     );
   }
 }
