@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-
 void main() {
-  runApp(MainPage());
+  runApp(MaterialApp(
+    title: 'Flutter Demo',
+    theme: ThemeData(
+      primarySwatch: Colors.blue,
+    ),
+    home: MainPage(),
+  ));
 }
 
 class MainPage extends StatelessWidget {
@@ -51,9 +56,6 @@ class MainPage extends StatelessWidget {
           ),
         ),
       ),
-      routes:{
-        "/main": (context) => const MainPage()
-      },
     );
   }
 }
